@@ -80,41 +80,41 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: $PWD/var
+      device: /mnt/repo_storage/var
       o: bind
   app-public:
     driver: local
     driver_opts:
       type: none
-      device: $PWD/public
+      device: /mnt/repo_storage/public
       o: bind
   docker-logs-nginx:
     driver: local
     driver_opts:
       type: none
-      device: $PWD/docker/logs/nginx
+      device: /mnt/repo_storage/docker/logs/nginx
       o: bind
   docker-nginx-scripts:
     driver: local
     driver_opts:
       type: none
-      device: $PWD/docker/nginx/scripts
+      device: /mnt/repo_storage/docker/nginx/scripts
       o: bind
   docker-nginx-ssl-certs:
     driver: local
     driver_opts:
       type: none
-      device: $PWD/docker/nginx/ssl/certs
+      device: /mnt/repo_storage/docker/nginx/ssl/certs
       o: bind
   docker-nginx-ssl-private:
     driver: local
     driver_opts:
       type: none
-      device: $PWD/docker/nginx/ssl/private
+      device: /mnt/repo_storage/docker/nginx/ssl/private
       o: bind
   docker-crontabs:
     driver: local
     driver_opts:
       type: none
-      device: $PWD/docker/crontabs
+      device: /mnt/repo_storage/docker/crontabs
       o: bind
