@@ -18,6 +18,10 @@ if (!class_exists(Application::class)) {
     throw new RuntimeException('You need to add "symfony/framework-bundle" as a Composer dependency.');
 }
 
+// Workaround for missing env vars
+putenv('COMPOSER_HOME=/home/forge/composer.licensemy.app/.composer');
+putenv('HOME=/home/forge/composer.licensemy.app');
+
 $input = new ArgvInput();
 if (null !== $env = $input->getParameterOption(['--env', '-e'], null, true)) {
     putenv('APP_ENV='.$_SERVER['APP_ENV'] = $_ENV['APP_ENV'] = $env);
